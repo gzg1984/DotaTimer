@@ -15,6 +15,12 @@
 		9E411A8D1B39A6D600335808 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E411A8C1B39A6D600335808 /* Images.xcassets */; };
 		9E411A901B39A6D700335808 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E411A8E1B39A6D600335808 /* LaunchScreen.xib */; };
 		9E411A9C1B39A6D700335808 /* Dota_TimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E411A9B1B39A6D700335808 /* Dota_TimerTests.m */; };
+		9EB326FE1B3C33280093BBE5 /* SoundListElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB326FD1B3C33280093BBE5 /* SoundListElement.m */; };
+		9EE5FFE51B39AA090004B685 /* qiangfu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5FFE11B39AA090004B685 /* qiangfu.mp3 */; };
+		9EE5FFE61B39AA090004B685 /* xiaobinsj.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5FFE21B39AA090004B685 /* xiaobinsj.mp3 */; };
+		9EE5FFE71B39AA090004B685 /* xiaobinsx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5FFE31B39AA090004B685 /* xiaobinsx.mp3 */; };
+		9EE5FFE81B39AA090004B685 /* yeguaisx.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5FFE41B39AA090004B685 /* yeguaisx.mp3 */; };
+		9EE5FFEB1B39AA3E0004B685 /* SoundArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE5FFEA1B39AA3E0004B685 /* SoundArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,14 @@
 		9E411A951B39A6D700335808 /* Dota TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dota TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E411A9A1B39A6D700335808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E411A9B1B39A6D700335808 /* Dota_TimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dota_TimerTests.m; sourceTree = "<group>"; };
+		9EB326FC1B3C33280093BBE5 /* SoundListElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundListElement.h; sourceTree = "<group>"; };
+		9EB326FD1B3C33280093BBE5 /* SoundListElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundListElement.m; sourceTree = "<group>"; };
+		9EE5FFE11B39AA090004B685 /* qiangfu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = qiangfu.mp3; sourceTree = "<group>"; };
+		9EE5FFE21B39AA090004B685 /* xiaobinsj.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = xiaobinsj.mp3; sourceTree = "<group>"; };
+		9EE5FFE31B39AA090004B685 /* xiaobinsx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = xiaobinsx.mp3; sourceTree = "<group>"; };
+		9EE5FFE41B39AA090004B685 /* yeguaisx.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeguaisx.mp3; sourceTree = "<group>"; };
+		9EE5FFE91B39AA3E0004B685 /* SoundArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundArray.h; sourceTree = "<group>"; };
+		9EE5FFEA1B39AA3E0004B685 /* SoundArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,12 @@
 		9E411A701B39A6D600335808 = {
 			isa = PBXGroup;
 			children = (
+				9EE5FFE91B39AA3E0004B685 /* SoundArray.h */,
+				9EE5FFEA1B39AA3E0004B685 /* SoundArray.m */,
+				9EE5FFE11B39AA090004B685 /* qiangfu.mp3 */,
+				9EE5FFE21B39AA090004B685 /* xiaobinsj.mp3 */,
+				9EE5FFE31B39AA090004B685 /* xiaobinsx.mp3 */,
+				9EE5FFE41B39AA090004B685 /* yeguaisx.mp3 */,
 				9E411A7B1B39A6D600335808 /* Dota Timer */,
 				9E411A981B39A6D700335808 /* Dota TimerTests */,
 				9E411A7A1B39A6D600335808 /* Products */,
@@ -94,6 +114,8 @@
 				9E411A8C1B39A6D600335808 /* Images.xcassets */,
 				9E411A8E1B39A6D600335808 /* LaunchScreen.xib */,
 				9E411A7C1B39A6D600335808 /* Supporting Files */,
+				9EB326FC1B3C33280093BBE5 /* SoundListElement.h */,
+				9EB326FD1B3C33280093BBE5 /* SoundListElement.m */,
 			);
 			path = "Dota Timer";
 			sourceTree = "<group>";
@@ -204,9 +226,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE5FFE71B39AA090004B685 /* xiaobinsx.mp3 in Resources */,
+				9EE5FFE61B39AA090004B685 /* xiaobinsj.mp3 in Resources */,
+				9EE5FFE51B39AA090004B685 /* qiangfu.mp3 in Resources */,
 				9E411A8B1B39A6D600335808 /* Main.storyboard in Resources */,
 				9E411A901B39A6D700335808 /* LaunchScreen.xib in Resources */,
 				9E411A8D1B39A6D600335808 /* Images.xcassets in Resources */,
+				9EE5FFE81B39AA090004B685 /* yeguaisx.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE5FFEB1B39AA3E0004B685 /* SoundArray.m in Sources */,
 				9E411A881B39A6D600335808 /* SecondViewController.m in Sources */,
+				9EB326FE1B3C33280093BBE5 /* SoundListElement.m in Sources */,
 				9E411A821B39A6D600335808 /* AppDelegate.m in Sources */,
 				9E411A851B39A6D600335808 /* FirstViewController.m in Sources */,
 				9E411A7F1B39A6D600335808 /* main.m in Sources */,
@@ -424,6 +452,7 @@
 				9E411AA11B39A6D700335808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E411AA21B39A6D700335808 /* Build configuration list for PBXNativeTarget "Dota TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +461,7 @@
 				9E411AA41B39A6D700335808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
