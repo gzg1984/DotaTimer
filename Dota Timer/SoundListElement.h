@@ -15,7 +15,9 @@
 - (id)initWithString:(NSString*)InitName;
 //@property (nonatomic,strong) NSString *Name;
 
-- (NSString *) getName;
+- (NSString *) Name;
+- (NSInteger) Interval;
+
 //- (void) setName:(NSString *)theName;
 /*
 - (void) setLastName: (NSString *) m_lastName;

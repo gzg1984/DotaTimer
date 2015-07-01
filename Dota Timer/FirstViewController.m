@@ -7,6 +7,9 @@
 //
 
 #import "FirstViewController.h"
+#import "SoundListElement.h"
+#import "SecondViewController.h"
+
 #import "SoundArray.h"
 
 
@@ -19,15 +22,26 @@
 
 @property (nonatomic) BOOL  isrunning;
 @property (nonatomic,strong) SoundArray* Sa;
+@property (nonatomic,strong) SecondViewController* ListController;
+
 
 @end
 
 @implementation FirstViewController
+@synthesize ListController=_ListController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title=@"Chat";
+    for (UIViewController *controller in self.parentViewController.childViewControllers)
+    {
+        if ([controller isKindOfClass:[SecondViewController class]])
+        {
+            _ListController=(SecondViewController*)controller;
+            self.ListController.tabBarItem.title=@"Contact";
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,6 +150,15 @@ static SystemSoundID xiaobinsx = 0;
     //NSString *newtitle=[currenttitle stringByAppendingString:timerstring];
     //[myDisplay setText:newtitle]; //myDisplay.text = newtitle;
     //self.timerShower.txt=newtitle
+    SoundListElement* sle;
+
+    for (id key in self.ListController.ListData)
+    {
+        NSLog(@"key: %@ ,value: %@!!!!!!!!!",key,[self.ListController.ListData objectForKey:key]);
+        sle=[self.ListController.ListData objectForKey:key];
+        NSLog(@"sle.name: %@",sle.Name);
+        NSLog(@"sle.interval: %ld",(long)sle.Interval);        
+    }
     self.TimerShower.text=@"00:00";
     self.current_minut= 0;
     self.current_second= 0;

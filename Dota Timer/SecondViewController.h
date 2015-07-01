@@ -10,7 +10,6 @@
 
 @interface SecondViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 
-
-
+- (NSDictionary *) ListData;
 @end
 

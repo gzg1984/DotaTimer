@@ -13,12 +13,15 @@
 @interface SecondViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *SoundList;
 @property (strong, nonatomic) NSArray *list;
+@property (strong, nonatomic) NSDictionary *SoundListData;
 @end
 
 @implementation SecondViewController
 
 @synthesize SoundList=_SoundList;
 @synthesize list=_list;
+@synthesize SoundListData=_SoundListData;
+
 
 /*
  - (void)viewDidLoad {
@@ -54,30 +57,44 @@
     return cell;
 }
 
-- (void)viewDidLoad
+- (NSDictionary *) SoundListData
 {
-    [super viewDidLoad];
-
-    // Do any additional setup after loading the view, typically from a nib.
-    //SoundListElement *xiaobinshuaxin = [[SoundListElement alloc] init];
-    SoundListElement *xiaobinshuaxin = [[SoundListElement alloc] initWithString:@"小兵刷新"];
-
-   //[xiaobinshuaxin setName:@"小兵刷新"];
+    if (_SoundListData == nil)
+    {
+        SoundListElement *xiaobinshuaxin = [[SoundListElement alloc] initWithString:@"小兵刷新"];
+    
+    //[xiaobinshuaxin setName:@"小兵刷新"];
     SoundListElement *yeguaishuaxin =[[SoundListElement alloc] initWithString:@"野怪刷新"];
     SoundListElement *qiangfu = [[SoundListElement alloc] initWithString:@"抢符"];
     SoundListElement *my4 = [[SoundListElement alloc] init];
     
     
-  //  NSDictionary *myClassDict = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, @"xiaobinshuaxin" ,nil];;
-   // NSDictionary *myClassDict = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, [xiaobinshuaxin getName],nil];;
+    //  NSDictionary *myClassDict = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, @"xiaobinshuaxin" ,nil];;
+    // NSDictionary *myClassDict = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, [xiaobinshuaxin getName],nil];;
+    
+    _SoundListData = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, [xiaobinshuaxin Name],yeguaishuaxin, [yeguaishuaxin Name] ,qiangfu, [qiangfu Name],my4, @"my4", nil];
+    }
+    return _SoundListData;
+}
 
-   NSDictionary *myClassDict = [NSDictionary dictionaryWithObjectsAndKeys:xiaobinshuaxin, [xiaobinshuaxin getName],yeguaishuaxin, [yeguaishuaxin getName] ,qiangfu, [qiangfu getName],my4, @"my4", nil];
+- (NSDictionary *) ListData
+{
+    return self.SoundListData;
+}
+
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+
     
     NSMutableArray* array = [[NSMutableArray alloc] init];
 
-    for (id key in myClassDict)
+    for (id key in self.SoundListData)
 {
-        NSLog(@"key: %@ ,value: %@",key,[myClassDict objectForKey:key]);
+       //NSLog(@"key: %@ ,value: %@",key,[self.SoundListData objectForKey:key]);
     [array addObject:key];
 
   }

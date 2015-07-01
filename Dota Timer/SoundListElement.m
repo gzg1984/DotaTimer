@@ -9,6 +9,7 @@
 #import "SoundListElement.h"
 @interface SoundListElement()
 @property (nonatomic,strong) NSString *Name;
+@property (nonatomic) NSInteger Interval;
 
 @end
 
@@ -16,6 +17,8 @@
 @implementation SoundListElement
 
 @synthesize Name=_Name;
+@synthesize Interval=_Interval;
+
 //{
 //    SystemSoundID SSID;
 //    NSString *PathName;
@@ -30,9 +33,15 @@
     return self;
 }
 
-- (NSString *) getName
+- (NSString *) Name
 {
     return _Name;
+}
+
+- (NSInteger) Interval
+{
+    _Interval=0;
+    return _Interval;
 }
 
 @end
